@@ -1,8 +1,27 @@
+import { Route, Routes } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import Inbox from "./pages/Inbox";
+
 const App = () => {
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold text-blue-600">Hello, Todo App!</h1>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <MainLayout>
+            <Inbox />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/app/inbox"
+        element={
+          <MainLayout>
+            <Inbox />
+          </MainLayout>
+        }
+      />
+    </Routes>
   );
 };
 
