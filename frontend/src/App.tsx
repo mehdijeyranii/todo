@@ -1,12 +1,27 @@
-import Sidebar from "./components/sidebar/Sidebar";
+import { Route, Routes } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import Inbox from "./pages/Inbox";
 
 const App = () => {
   return (
-    <div className="content w-screen h-screen overflow-hidden flex justify-stretch items-stretch">
-      <Sidebar />
-      <div className="resize w-1 h-full bg-zinc-950"></div>
-      <div className="main w-full h-full bg-green-600"></div>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <MainLayout>
+            <Inbox />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/app/inbox"
+        element={
+          <MainLayout>
+            <Inbox />
+          </MainLayout>
+        }
+      />
+    </Routes>
   );
 };
 
