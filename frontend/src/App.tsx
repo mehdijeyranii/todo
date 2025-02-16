@@ -1,7 +1,11 @@
+import Sidebar from "./components/sidebar/Sidebar";
+
 const App = () => {
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold text-blue-600">Hello, Todo App!</h1>
+    <div className="content w-screen h-screen overflow-hidden flex justify-stretch items-stretch">
+      <Sidebar />
+      <div className="resize w-1 h-full bg-zinc-950"></div>
+      <div className="main w-full h-full bg-green-600"></div>
     </div>
   );
 };

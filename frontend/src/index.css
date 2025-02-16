@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-zinc-950 text-zinc-300 text-sm;
+}
+
+::-webkit-scrollbar {
+  @apply w-px;
+}
+
+::-webkit-scrollbar-track {
+  @apply rounded-lg bg-zinc-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-lg bg-zinc-500;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-zinc-700;
+}
